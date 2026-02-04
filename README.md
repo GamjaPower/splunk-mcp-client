@@ -16,14 +16,14 @@ Splunk MCP 엔드포인트를 JSON-RPC 2.0으로 호출하는 최소한의 예�
    - 실행: `sh mcp_ping.sh`
    - 만약 에러가 발생하면 Splunk 서버에서 localhost로 직접 호출해서 정상 동작하면 중간에 방화벽을 의심해봐야 함 
    - 방화벽 문제가 있어도 SSL 에러가 발생하는 경우가 있으니 방화벽 설정을 확인 해야함 
-   
+
 
 2) `mcp_ping.py`  
    - 환경변수 기반 `ping` 호출 (랜덤 UUID id).  
    - 실행: `python mcp_ping.py`
 
 3) 기타 파이썬 유틸  
-   - `mcp_toollist.py`: `tools/list` 호출, 이용 가능한 MCP 도구 나열. 고정 `"id": "1"` 사용.  
+   - `mcp_toollist.py`: `tools/list` 호출, 이용 가능한 MCP 도구 나열.
      실행: `python mcp_toollist.py`  
    - `mcp_get_indexes.py`: `tools/call` 로 `get_indexes` 실행, `row_limit`(기본 100, 1–1000)과 `offset`(기본 0) 전달.  
      실행: `python mcp_get_indexes.py --row-limit 200 --offset 5`
